@@ -9,7 +9,7 @@ class CartController < ApplicationController
 				session[:cart] = {}
 				cart = session[:cart]
 			end
-			# if the product has already been added to the cart, increment the value else set
+			# if the product has already been added to the cart, increment the value else set the value to 1.
 			if cart[id] then
 				cart[id] = cart[id] + 1
 			else
